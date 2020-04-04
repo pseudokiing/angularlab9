@@ -1,0 +1,22 @@
+<mat-form-field>
+  <mat-label>Find Your Hero</mat-label>
+  <input matInput placeholder="Find Your Hero" [(ngModel)]="comicName">
+</mat-form-field><br/>
+<button mat-raised-button color="primary" (click)="findComic(comicName)">FIND A HERO</button><br>
+{{comicFilter}}<br/>
+
+
+<div>
+    <app-add-comic [startingId]="comicBookList.length" (newComicEvent)="addComicToList($event)"></app-add-comic>
+</div>
+
+<div *ngFor="let comic of (comicBookList | filter); index as container" >
+  <h2>TECH</h2>
+  <app-content-card *ngFor="let comic of (comicBookList | filter); last as isLast; index as index" [comic]="comic" [class.is-last]="isLast" [class.index]="1"></app-content-card>
+
+  <h2>DETECTIVE</h2>
+  <app-content-card *ngFor="let comic of (comicBookList | filter: 'Detective'); last as isLast; index as indexDet" [comic]="comic" [class.is-last]="isLast" [class.indexDet]="1"></app-content-card>
+
+  <h2>HORROR</h2>
+  <app-content-card *ngFor="let comic of (comicBookList | filter: 'Horror'); index as indexHor; last as isLast" [comic]="comic" [class.indexHor]="1" [class.is-last]="isLast"></app-content-card>
+</div>

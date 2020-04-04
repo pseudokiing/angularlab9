@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>Add Hero</h1>
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Enter Alias</mat-label>
+      <input matInput placeholder="Alias" name="alias" [(ngModel)]="data.newComicItem.alias">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Enter Name</mat-label>
+      <input matInput placeholder="Name" name="name" [(ngModel)]="data.newComicItem.name"><br/>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Enter Description</mat-label>
+      <input matInput placeholder="Description" name="body" [(ngModel)]="data.newComicItem.body">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Enter Genre</mat-label>
+      <input matInput placeholder="Genre" name="genre" [(ngModel)]="data.newComicItem.genre">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Comic Art</mat-label>
+      <input matInput default="http://insidepulse.com/wp-content/uploads/2016/09/Flash-6-Wally-West-Kid-Flash-DC-Comics-Rebirth-1.jpg" name="imgUrl" [(ngModel)]="data.newComicItem.imgUrl"><!-- http://insidepulse.com/wp-content/uploads/2016/09/Flash-6-Wally-West-Kid-Flash-DC-Comics-Rebirth-1.jpg  -->
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-raised-button color="warn" [mat-dialog-close]="data.newComicItem" cdkFocusInitial>Add Hero</button>
+</div>
+<!--<button mat-raised-button color="accent" (click)="addComic(aliasBinding, nameBinding, bodyBinding, genreBinding, imgBinding, errBinding)">Add Comic</button><br/>-->
+<!--<span> {{ err }} {{ success }} </span>-->
+

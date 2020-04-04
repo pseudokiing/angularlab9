@@ -1,0 +1,23 @@
+<a [routerLink]="[/content', comic.id]" routerLinkActive="active">Comic Detail</a><br>
+<div class="comic-book-wrapper">
+  <img class="comic-image" (click)="displayId()" src="{{ comic.imgUrl }}"/>
+  <div id="content-wrapper">
+    <div class="comic-body">
+      <span class="comic-div">Description:</span> {{ comic.body }}
+    </div>
+    <div class="comic-name">
+      <span class="comic-div">Name:</span> {{ comic.name }}
+    </div>
+    <div class="comic-title">
+      <span class="comic-div">Alias:</span> {{ comic.alias }}
+    </div>
+    <div class="comic-type">
+      <span class="comic-div">Genre:</span> {{ comic.genre }}
+    </div>
+    <div class="comic-tags" *ngIf="comic.tags">
+      <div *ngFor="let tag of comic.tags">
+        <span class="comic-div">Tags:</span>  {{ tag }}
+      </div>
+    </div>
+  </div>
+</div>

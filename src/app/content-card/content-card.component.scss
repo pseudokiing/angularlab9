@@ -1,0 +1,48 @@
+:host {
+  max-width: 500px;
+  display: block;
+  margin: 5px auto;
+
+}
+:host.index {
+  background-color: mediumpurple;
+}
+:host.indexDet {
+  background-color: cornflowerblue;
+}
+:host.indexHor {
+  background-color: indianred;
+}
+:host.is-last {
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.6), 0 1px 1px 0 rgba(0,0,0,.5), 0 2px 1px -1px rgba(0,0,0,.45);
+}
+:host.tech{
+  background-color: blue;
+}
+.comic-book-wrapper {
+    text-align: center;
+    padding: 16px;
+    //background-color: red;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+}
+.comic-image{
+    width: 100%;
+    max-width: 500px;
+    display: inline-block;
+}
+.comic-div{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#content-wrapper{
+    text-align: left;
+}
+:host.container {
+    display: flex;
+   flex-direction: column;
+   background-color: aqua;
+ }
